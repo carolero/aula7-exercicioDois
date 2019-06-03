@@ -13,13 +13,20 @@ public class ExercicioDois {
 		System.out.println("Informe um número: ");
 		int numeroInformado = scan.nextInt();
 		
-		int multiplicador = 1;
+		System.out.println("Por onde quer iniciar a tabuada de " + numeroInformado + "?");
+		int pontoPartida = scan.nextInt();
 		
-		for (int contagem = 1; contagem <= 10; contagem++) {
-			int resultado = numeroInformado * multiplicador;
-			System.out.println(numeroInformado + " x " + multiplicador + " = " + resultado);
+		System.out.println("Até que número você quer que a tabuada multiplique?");
+		int pontoFinal = scan.nextInt();
+		
+		int multiplicador = pontoPartida;
+		
+		for (int contagem = multiplicador; contagem <= pontoFinal; contagem++) {
+			int resultado = numeroInformado * contagem;
+			System.out.println(numeroInformado + " x " + contagem + " = " + resultado);
 			multiplicador++;
 		}
+		
 
 	}
 
